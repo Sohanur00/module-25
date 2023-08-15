@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js dom summary</title>
+</head>
+
+<body>
+
+<h1>Final dom event handlers</h1>
+
+<h3 id="handler-status" >default text</h3>
+<p  id="inner-text-disply">input text</p>
+<input id="input-field" type="text">
+<button id="btn-update" >updated</button>
+<br>
+<br>
+<button onclick="handleOnClick()" >Add onclick function </button>
+<button id="event-add">handled event ad addEventListener</button>
+
+<script>
+
+function handleOnClick(){
+const handlerstatus = document.getElementById('handler-status');
+
+handlerstatus.innerText = 'handled on onclick'
+
+}
+
+// option 2
+
+document.getElementById('event-add').addEventListener('click',function(){
+
+    const handlerStatus = document.getElementById('handler-status');
+    handlerStatus.innerText ='text upload by event add listeneer'
+})
+
+// option 2 recap
+
+document.getElementById('btn-update').addEventListener('click',function(){
+
+const inputField = document.getElementById('input-field');
+const inputText = inputFiled.value;
+// *****
+const p = document.getElementById('inner-text-disply');
+p.innerText=inoutText;
+
+inputField.value ='';
+
+})
+
+
+</script>
+
+</body>
+
+</html>
